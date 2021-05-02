@@ -1,0 +1,124 @@
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+
+
+
+<div style="margin-top: 30px; margin-bottom: 10px; text-align: center; color: #e57373; font-weight: bold; font-size: 38px;">
+
+	<div> 
+		What are we eating this week?
+	</div>
+	
+</div>
+
+
+<div style="margin-top: 10px; margin-bottom: 10px; padding-top: 30px; padding-bottom: 30px;">
+
+
+
+	<table class="centered highlight">
+
+		<thead>
+			 <tr style="background-color: #ffccbc;">
+              <th>Day</th>
+              <th>Lunch</th>
+              <th>Dinner</th>
+          </tr>
+        </thead>
+
+        
+        <tbody>
+
+        	
+        	
+        	<tr>
+        		<td> Monday</td>
+
+
+        		<td> {{ monday_meal.lunch}} </td>
+        		<td> {{ monday_meal.dinner }}</td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Tuesday</td>
+
+
+        		<td> {{ tuesday_meal.lunch }} </td>
+        		<td> {{ tuesday_meal.dinner }}</td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Wednesday</td>
+
+
+        		<td> {{ wednesday_meal.lunch }}</td>
+        		<td> {{ wednesday_meal.dinner }}</td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Thursday</td>
+
+
+        		<td> {{thursday_meal.lunch}} </td>
+        		<td> {{thursday_meal.dinner}}</td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Friday</td>
+
+
+        		<td> {{ friday_meal.lunch }} </td>
+        		<td> {{ friday_meal.dinner }} </td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Saturday</td>
+
+
+        		<td> {{ saturday_meal.lunch }} </td>
+        		<td> {{ saturday_meal.dinner}} </td>
+        		
+        	</tr>
+
+        	<tr>
+        		<td> Sunday</td>
+
+
+        		<td> {{ sunday_meal.lunch }} </td>
+        		<td> {{ sunday_meal.dinner }}</td>
+        		
+        	</tr>
+
+
+        </tbody>
+    </table>
+    
+
+</div>
+
+<div class="container" style="margin-bottom: 40px; text-align: right;">
+
+<a class="btn waves-effect waves-light #e57373 red lighten-2" href="{% url 'week_plan'%}">Edit
+    
+  </a>
+
+ </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

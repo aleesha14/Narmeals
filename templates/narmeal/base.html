@@ -1,0 +1,111 @@
+
+{% load static %}
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Narmeals</title>
+   
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<style>
+  body {
+    background-color:#fbe9e7;
+    font-family: Roboto;
+    
+  }
+
+  thead {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  nav {
+    border-collapse: all;
+
+  }
+
+  tr {height: 65px;
+
+  }
+
+  th {text-align: center;}
+
+  td {
+    text-align: center;
+    height: 30px;
+  }
+
+  .section {
+    height: 120px;
+
+  }
+
+  #headings {
+    height: 50px;
+  }
+
+ button {
+  margin-top: 20px;
+ }
+  
+
+  #day {
+    margin-top: 30px;
+
+  }
+
+  .input-field {
+
+  }
+
+
+
+    </style>
+  
+
+
+</head>
+
+<body>
+
+
+ <nav class="#bf360c deep-orange darken-4">
+ 	<div class="container">
+    <div class="nav-wrapper">
+      <a href="{% url 'home' %}" class="brand-logo" style="font-family: Pacifico; font-size: 30px;">Narmeals</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+        <li><a href="{% url 'week_plan' %}">Week Plan</a></li>
+        <li><a href="{% url 'meals_list' %}">Meals</a></li>
+      </ul>
+    </div>
+</div>
+  </nav>
+
+
+{% block content %}
+
+{% endblock content %} 
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<script> $('.dropdown-trigger').dropdown(); </script>
+<script> $('select').formSelect();</script>
+
+</body>
+</html>

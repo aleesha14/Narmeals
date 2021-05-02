@@ -1,0 +1,55 @@
+
+		
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+
+ <div class="container">
+
+    <div class="section" style="margin-top: 30px;">
+
+
+    
+
+    <h4><b> {{ meal.meal_name | title }} </b> </h4>
+
+
+    <div class="divider">
+    </div>
+    <div style="color:#b0bec5">
+    Meal Name
+  </div>
+  </div>
+
+  <div class="section" style="margin-top: 30px;">
+
+
+
+
+
+  
+
+    <h6> {{ meal.meal_notes }} </h6>
+
+    <div class="divider">
+    </div>
+    <div style="color:#b0bec5">
+    Meal Notes 
+</div>
+</div>
+<form action="edit/{{meal.id}}" method="post">
+  {% csrf_token %}
+<button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action"> Edit
+    
+  </button>
+</form>
+</div>
+{% endblock %}
+   
+
+		
+
+ 
+ 

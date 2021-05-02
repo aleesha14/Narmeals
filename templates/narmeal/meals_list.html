@@ -1,0 +1,74 @@
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+<div class="section" style="margin-top: 30px; margin-bottom: 10px;"> 
+
+<div class="row">
+
+	<div style="text-align: right;">
+	
+		<h6> Add New Meal </h6>    
+
+
+	<a href="{% url 'add_meal' %}"class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+	</div>
+	<h6> You have {{num_meals}} saved meals. </h6>
+	<div class="divider" style="margin-top: 10px;">
+	</div>
+</div>
+	<h6> You have {{num_meals}} saved meals. </h6>
+
+	
+
+
+
+</div>
+
+
+
+{% for meal in meal_list %}
+	
+
+
+	
+
+	<ul class="collection">
+      
+       <li class="collection-item">
+       	{{ meal.meal_name | title }}
+
+       	<a href="{% url 'meal_view' meal.id %}" class="secondary-content"><i class="material-icons">chevron_right</i></a>
+       	
+       	<div class="right-align">
+       		
+       		<form action="delete_meal/{{ meal.id }}" method="post">
+       			{% csrf_token %}
+       		<button class="waves-effect waves-light btn-small #f44336 red" type="submit"> Delete </button>
+
+       	</form>
+       	</div>
+      </li>
+  
+    </ul>
+
+
+
+
+      
+	{% endfor %}
+
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+		

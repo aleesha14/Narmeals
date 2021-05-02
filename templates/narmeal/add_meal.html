@@ -1,0 +1,52 @@
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+<h1> Add Meal </h1>
+
+		
+
+		
+
+		<div class="row">
+    <form action="{% url 'add' %}" method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+        	{% csrf_token %}
+          <input placeholder="Add the name of the meal" name="content_1"id="meal_name" type="text" class="validate">
+          <label for="meal_name">Meal Name</label>
+        </div>
+    </div>
+    <div class="row">
+    	{% csrf_token %}
+
+        <div class="input-field col s6">
+          <input placeholder="Add your recipe/meal notes" name="content_2"id="meal_notes" type="text" class="validate">
+          <label for="meal_notes">Meal Notes</label>
+        </div>
+      </div>
+      <div class="col s3">  <button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save Changes
+    
+  </button>
+
+
+        </div>
+      </div>
+    </form>
+  
+
+
+  
+  <a style="margin-left:25px;" href="{% url 'meals_list' %}"> Back to Meals</a>
+
+</div>
+
+
+
+{% endblock %}
+
+
+ 

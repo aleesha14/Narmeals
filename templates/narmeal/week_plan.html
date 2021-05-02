@@ -1,0 +1,368 @@
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+
+
+
+<div class="container" >
+	
+
+
+<div class="section" id="headings">
+	<div class="row" align="center" style="font-weight: bold;">
+
+		<div class="col s3">Day</b></div>
+      <div class="col s3">Lunch</div>
+      <div class="col s3">Dinner</div>
+      <div class="col s3"></div>
+  </div>
+</div>
+  <div class="divider">
+		</div>
+
+		<div class="section">
+
+<div class="row" align="center">
+
+		<div class="col s3" id="day">Monday</div>
+		<form action="{% url 'monday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="monday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="monday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+    	
+
+      <div class="col s3">  <button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+
+  	<div> </div>
+  
+  </form>
+
+ 		 </div>
+ 		</div>
+
+ 		 
+		<div class="divider">
+		</div>
+
+		<div class="section">
+  	
+	
+
+<div class="row" align="center">
+
+		<div class="col s3" id="day">Tuesday</div>
+		<form action="{% url 'tuesday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="tuesday1">
+	      	<option value="" disabled selected>Nothing yet</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="tuesday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+ 		</div>
+
+ 		 
+		<div class="divider">
+		</div>
+	
+<div class="section">
+
+<div class="row" align="center">
+
+		<div class="col s3" id="day">Wednesday</div>
+		<form action="{% url 'wednesday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="wednesday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="wednesday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+ 		</div>
+ 		 
+		<div class="divider">
+		</div>
+	
+
+	<div class="section">
+
+ 	<div class="row" align="center">
+
+		<div class="col s3" id="day">Thursday</div>
+		<form action="{% url 'thursday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="thursday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="thursday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+
+ 		</div>
+
+ 		 
+		<div class="divider">
+		</div>
+
+		<div class="section">
+	
+	<div class="row" align="center">
+
+		<div class="col s3" id="day">Friday</div>
+		<form action="{% url 'friday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="friday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="friday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+ 		</div>
+
+ 		 
+		<div class="divider">
+		</div>
+	
+	<div class="section">
+
+ 		 	<div class="row" align="center">
+
+		<div class="col s3" id="day">Saturday</div>
+		<form action="{% url 'saturday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="saturday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="saturday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+ 		</div>
+
+ 		 
+		<div class="divider">
+		</div>
+
+		<div class="section">
+	
+
+ 		 	<div class="row" align="center">
+
+		<div class="col s3" id="day">Sunday</div>
+		<form action="{% url 'sunday' %}" method="post">
+     
+
+      		<div class="input-field col s3">
+ 			{% csrf_token %}
+ 			<select name="sunday1">
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	     	 {% endfor %}
+    		</select>
+			</div>
+    
+
+ 
+      	<div class="input-field col s3">
+ 
+ 			{% csrf_token %}
+ 			<select name="sunday2">
+    	
+	      	<option value="" disabled selected>Nothing yet!</option>
+	     	 {% for meal in meal_list %}
+	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
+	      {% endfor %}
+	    
+    		</select>
+    		</div>
+
+      <div class="col s3"><button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Save
+    
+  </button></div>
+  </form>
+
+ 		 </div>
+ 		</div>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+  
+
+{% endblock %}

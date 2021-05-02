@@ -1,0 +1,62 @@
+{% extends 'narmeal/base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+<h1> Edit Meal </h1>
+
+		
+
+		
+
+		<div class="row">
+    <form action="{% url 'edit_meal' meal.id  %}" method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+        	{% csrf_token %}
+          <input placeholder="Add the name of the meal" name="edit_name"id="edit_name" type="text" class="validate" value="{{ meal.meal_name }}">
+          <label for="edit_name">Meal Name</label>
+        </div>
+    </div>
+    <div class="row">
+    	{% csrf_token %}
+
+        <div class="input-field col s6">
+          <input placeholder="Add your recipe/meal notes" name="edit_notes"id="edit_notes" type="text" class="validate" value="{{meal.meal_notes}}">
+          <label for="edit_notes">Meal Notes</label>
+        </div>
+      </div>
+      <div class="col s3">  <button class="btn waves-effect waves-light #e57373 red lighten-2" type="submit" name="action">Update Meal
+    
+  </button>
+
+
+        </div>
+      </div>
+    </form>
+  
+
+
+  
+  <a style="margin-left:25px;" href="{% url 'meals_list' %}"> Back to Meals</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
