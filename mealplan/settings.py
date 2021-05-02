@@ -28,7 +28,8 @@ SECRET_KEY = 'fi$me8a62$$(ey1_ema==8u=@*frr_!ac=u)vesql*dm9o)0k9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['narmeals.herokuapp.com']
 
 
 # Application definition
