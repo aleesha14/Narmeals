@@ -35,7 +35,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="monday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{monday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -49,7 +49,7 @@
  			{% csrf_token %}
  			<select name="monday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{monday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -87,7 +87,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="tuesday1">
-	      	<option value="" disabled selected>Nothing yet</option>
+	      	<option value="" disabled selected>{{tuesday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -101,7 +101,7 @@
  			{% csrf_token %}
  			<select name="tuesday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{tuesday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -132,7 +132,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="wednesday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{wednesday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -146,7 +146,7 @@
  			{% csrf_token %}
  			<select name="wednesday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{wednesday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -177,7 +177,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="thursday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{thursday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -191,7 +191,7 @@
  			{% csrf_token %}
  			<select name="thursday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{thursday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -223,7 +223,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="friday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{friday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -237,7 +237,7 @@
  			{% csrf_token %}
  			<select name="friday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{friday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -268,7 +268,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="saturday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{saturday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -282,7 +282,7 @@
  			{% csrf_token %}
  			<select name="saturday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{saturday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
@@ -314,7 +314,7 @@
       		<div class="input-field col s3">
  			{% csrf_token %}
  			<select name="sunday1">
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{sunday_meal.lunch}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	     	 {% endfor %}
@@ -328,7 +328,7 @@
  			{% csrf_token %}
  			<select name="sunday2">
     	
-	      	<option value="" disabled selected>Nothing yet!</option>
+	      	<option value="" disabled selected>{{sunday_meal.dinner}}</option>
 	     	 {% for meal in meal_list %}
 	      	<option value="{{ meal.meal_name }}">{{ meal.meal_name }}</option>
 	      {% endfor %}
